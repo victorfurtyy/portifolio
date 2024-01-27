@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+
+	<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+	background: #26be61;
+}
+</style>
+
+</head>
+<body>
+
+	<div class="header-splash">
+		<img src="../img//app-icons/tempappIcon.png">
+		<h1 id="app-name">TempApp</h1>
+	</div>
+
+	<div class="content">
+		<img src="tempapp_assets/1.png">
+	</div>
+
+	
+<script>
+
+const bg = '#181818';
+
+const splash = document.querySelector('.header-splash');
+
+function splashload() {
+	splash.style = 'background: ' + bg + '; height: 110vh;'
+	setTimeout(() => {
+		splash.style = 'background: ' + bg + ';' + 'transition: 1s; top: 0em; height: 20%; width: 100%;'
+		splash.children[0].style = 'width: 30%; left: 20%'
+		setTimeout(() => {
+			splash.children[1].style = 'transition: 1s;opacity: 1;right: 1%;'
+		}, 500);
+	}, 3000);
+}
+
+splashload()
+
+</script>
+
+</body>
+</html>

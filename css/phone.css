@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap');
+
+:root {
+	--black: #1f1f1f;
+	--green: #21be61;
+	--headerHeight: 9em;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: white;
+	font-family: "Montserrat";
+	user-select: none;
+	text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    overflow: hidden;
+}
+
+
+
+
+.notification-bar {
+    position: absolute;
+    z-index: 3;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    height: 1.5em;
+
+    top: 0;
+    padding: .5em .25em;
+    background-color: #181818;
+    font-size: .85em;
+}
+.notification-bar .bar-set {
+    display: flex;
+    align-items: center;
+    gap: .35em;
+}
+.notification-bar .bar-set img {
+    height: 1.1em;
+}
+
+
+
+
+.lockscreen {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+    
+    background-color: #1f1f1f;
+    z-index: 2;
+
+    box-shadow: 0 5px 3px black;
+
+    top: 0%;
+    transition: top 1s;
+}
+
+.lockscreen .vicdev {
+    font-size: 2em;
+    text-shadow: 0.2em 0.2em 0px black;
+}
+.lockscreen .title {
+	margin-bottom: .5em;
+	text-transform: uppercase;
+    font-size: 2.5em;
+    text-shadow: 0.2em 0.2em 0px black;
+}
+.lockscreen .lock {
+    transition: .5s;
+    display: grid;
+    place-items: center;
+}
+.lockscreen .lock #unlock {
+    transition: .75s;
+    cursor: pointer;
+    width: 2em;
+    margin-bottom: .7em;
+}
+
+
+
+
+.desktop {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    
+    display: grid;
+    place-items: center;
+    grid-template-rows: calc(100vh - 1em - 5em) 1em 5em;
+    
+    z-index: 1;
+    
+    background: linear-gradient(0deg, rgba(24, 24, 24, 0.856) 0%, rgba(38,190,97,1) 43%);
+}
+
+.desktop .background {
+    filter: brightness(0);
+    width: 14em;
+    position: absolute;
+    z-index: -1;
+}
+
+.desktop .app-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0.5em .25em;
+    padding: 0.5em 0.3em;
+    width: 120%;
+    height: calc(100% - 1.5em);
+    margin-top: 1.5em;
+
+    transition: 1s;
+}
+.desktop .app {
+    display: grid;
+    grid-auto-rows: 2fr 1fr;
+    place-items: center;
+}
+.desktop .app .app-icon {
+    width: 3.4em;
+    height: 3.4em;
+    cursor: pointer;
+    
+    filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.5));
+    border-radius: 1em;
+    transition: .2s;
+}
+.app-icon:active {
+    opacity: .6;
+    background-color: #c4c4c4;
+}
+.disable > .app-icon {
+    opacity: .6;
+    background-color: #c4c4c4;
+}
+.disable > .app-name {
+    opacity: .6;
+}
+.desktop .app .app-name {
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: .8em;
+    font-weight: 600;
+}
+
+
+.desktop .caret {
+    margin-top: 1em;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    transition: .5s;
+}
+.desktop .caret-dot {
+    width: .8em;
+    height: .5em;
+
+    border-radius: .5em;
+    background-color: rgba(255, 255, 255, 0.60);
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+}
+.desktop .caret-active {
+    background-color: white;
+}
+
+.desktop .phone {
+    width: 100%;
+    height: 100%;
+    padding: .35em;
+
+    margin-top: 1em;
+    transition: .5s;
+}
+.desktop .phone .app {
+    grid-auto-rows: .5fr;
+}
+
+
+.desktop .open-app {
+    opacity: 0;
+    position: absolute;
+    width: 0%;
+    height: 0vh;
+    bottom: 0;
+    
+    background: #181818bd;
+    border: none;
+
+    transition: .45s;
+}
+
+
+.home-button {
+	opacity: 0;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    bottom: .5em;
+
+    border-radius: 5em;
+    width: 100%;
+    z-index: 1;
+    transition: .6s;
+}
+.home-button .button {
+    cursor: pointer;
+    width: 3.4em;
+    height: 1.2em;
+    
+    border-radius: 5em;
+    border: .2em solid rgb(255, 255, 255);
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
+    transition: .4s;
+}
+.home-button .button:active {
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0));
+}
+.home-button .buble {
+    z-index: -1;
+    bottom: -.5em;
+    position: absolute;
+    opacity: .3;
+    height: 2.2em;
+    background: white;
+    border-radius: 5em;
+
+    transition: .4s;
+    animation: bubleClick .4s forwards;
+}
+@keyframes bubleClick {
+    0% {
+        opacity: 0;
+        border-radius: 5em;
+        width: 0em;
+    }
+    100% {
+        opacity: .35;
+        border-radius: 3em;
+        width: 6em;
+        
+    }
+}
+
+
+
+@media only screen and (max-width: 280px) {
+    .lockscreen .title {
+        font-size: 1.75em;
+    }
+    .lockscreen .lock #unlock {
+        width: 1.75em;
+    }
+    .lockscreen .lock p {
+        font-size: .9em;
+    }
+
+
+
+    .notification-bar {
+        height: 1.1em;
+        padding: .75em .25em;
+    }
+    .notification-bar p {
+        font-size: .85em;
+    }
+    .notification-bar .bar-set {
+        height: .9em;
+        gap: 0.25em;
+    }
+    .notification-bar .bar-set img {
+        height: 1em;
+    } 
+
+
+
+    .desktop .app-gallery {
+        gap: 0em 0;
+    }
+
+    .desktop .app {
+        gap: 0em 0;
+    }
+    .desktop .app .app-icon  {
+        width: 2.8em;
+        height: 2.8em;
+    }
+    .desktop .app .app-name  {
+        font-size: .5em;
+    }
+
+
+
+    .home-button .button {
+        width: 3em;
+        height: 1em;
+    }
+    .home-button .buble {
+        height: 2em;
+    }
+
+
+    .desktop .background {
+        width: 11em;
+    }
+}
+
+
+
+@media only screen and (max-width: 190px) {
+    .lockscreen .title {
+        font-size: 1.5em;
+    }
+    .lockscreen .lock #unlock {
+        width: 1.5em;
+    }
+    .lockscreen .lock p {
+        font-size: .76em;
+    }
+
+
+    .notification-bar {
+        height: .6em;
+        padding: .6em .25em;
+    }
+    .notification-bar p {
+        font-size: .75em;
+    }
+    .notification-bar .bar-set {
+        height: .9em;
+        gap: 0.25em;
+    }
+    .notification-bar .bar-set img {
+        height: .7em;
+    }
+
+
+    .desktop .app-gallery {
+        gap: .1em .1em;
+    }
+
+    .desktop .app {
+        gap: .1em 0;
+    }
+    .desktop .app .app-icon  {
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: .75em;
+    }
+    .desktop .app .app-name  {
+        font-size: .5em;
+    }
+}

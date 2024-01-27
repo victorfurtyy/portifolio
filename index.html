@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+
+	<title>{ Vic } Dev</title>
+
+	<link rel="icon" type="image/png" href="img/favico.png" sizes="500x500">
+
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://kit.fontawesome.com/b6af7dcf3e.js" crossorigin="anonymous"></script>
+
+
+	<meta property="og:site_name" content="Carlos Victor's Portfolio">
+	<meta property="og:title" content="Programmer Website" />
+	<meta property="og:description" content="Portifólio e sobre do Carlos Victor" />
+	<meta property="og:image" itemprop="image"
+		content="https://www.victorfurtyy.repl.co/img/logo.png">
+	<meta property="og:type" content="website" />
+</head>
+
+<body>
+
+	<header>
+		<div class="vicdev-icon">
+			<img src="img/VicDev - file icon.png">
+			<div class="site-title">
+				<h2><span style="color:var(--green);font-weight: 700">{Vic}</span>Dev</h2>
+				<h1>PROGRAMMER</h1>
+				<h1>WEBSITE</h1>
+			</div>
+		</div>
+
+		<div class="menu-pc">
+			<div class="item">
+				<a href="#home">
+					<h1>início</h1>
+				</a>
+			</div>
+			<div class="item">
+				<a href="#sobre">
+					<h1>Sobre</h1>
+				</a>
+			</div>
+			<div class="item">
+				<a href="#projetos">
+					<h1>Projetos</h1>
+				</a>
+			</div>
+			<div class="item">
+				<a href="#contato">
+					<h1 class="green-button">Contato</h1>
+				</a>
+			</div>
+		</div>
+
+		<div class="menu-mobile">
+			<div class="menu-btn__burger"></div>
+		</div>
+		<div class="items-mobile">
+			<div class="item">
+				<a href="#home">
+					<h1>Início</h1>
+				</a>
+			</div>
+			<hr>
+			<div class="item">
+				<a href="#sobre">
+					<h1>Sobre</h1>
+				</a>
+			</div>
+			<hr>
+			<div class="item">
+				<a href="#projetos">
+					<h1>Projetos</h1>
+				</a>
+			</div>
+			<hr>
+			<div class="item">
+				<a href="#contato">
+					<h1 class="green-button">Contato</h1>
+				</a>
+			</div>
+		</div>
+	</header>
+
+
+
+
+	<section id="home">
+		<div class="content">
+			<h1>Estudante, Developer, e muito mais.</h1>
+			<a href="#sobre">
+				<p class="green-button">Veja mais</p>
+			</a>
+		</div>
+	</section>
+
+
+	<section id="sobre">
+		<div class="content">
+			<h1 class="title"><span style="color:var(--green)">&lt;</span>Sobre<span
+					style="color:var(--green)">/&gt;</span></h1>
+			<p>Meu nome é Carlos Victor, eu tenho <span id="age"></span>
+				<script>document.querySelector('#age').innerText = new Date() >= new Date('12-21') ? new Date().getFullYear() - 2002 : new Date().getFullYear() - 2002 - 1</script>
+				anos, e sou um entusiasta da computação.
+			</p>
+			<p>Técnico em Informática formado no Instituto Federal do Maranhão e estudante de Ciência da Computação na
+				Universidade União das Américas e Graduando em Engenharia de Software na universidade Jala University -
+				Cambridge, Califórnia</p>
+			<p>No momento desenvolvo aplicativos e sites de todas as modalidades.</p>
+		</div>
+	</section>
+
+
+	<section id="projetos">
+		<div class="content">
+
+			<div class="phone">
+				<img src="img/Phone.png" class="phoneFrame">
+				<iframe id="screen" src="projects.html"></iframe>
+			</div>
+
+		</div>
+	</section>
+
+
+	<section id="contato">
+		<div class="content">
+			<h1 class="title"><span style="color:var(--green)">&lt;</span>Contato<span
+					style="color:var(--green)">/&gt;</span></h1>
+			<div class="social">
+				<a href="https://twitter.com/victorfurtyy"><i class="fab fa-twitter"></i></a>
+				<a href="https://www.instagram.com/victorfurtyy/"><i class="fab fa-instagram"></i></a>
+				<a href="https://www.linkedin.com/in/victorfurtyy/"><i class="fab fa-linkedin"></i></a>
+			</div>
+			<h3>@victorfurtyy</h3>
+		</div>
+	</section>
+
+
+
+
+	<footer>
+		<h3>© <span id="copy-date"></span>
+			<script>document.querySelector('#copy-date').innerText = new Date().toISOString().split('T')[0].split('-')[0];</script>
+			<span style="color: var(--green);">{Vic}</span>Dev
+		</h3>
+	</footer>
+
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
