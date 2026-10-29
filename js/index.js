@@ -2,7 +2,7 @@ function d(element) {return document.querySelector(element)}
 
 
 addEventListener('scroll', function () {
-  if ((window.scrollY >= d('#home').offsetTop) && (window.scrollY < d('#sobre').offsetTop - d('#sobre').offsetTop * .3)) {
+  if ((window.scrollY >= d('#home').offsetTop) && (window.scrollY < d('#about').offsetTop - d('#about').offsetTop * .3)) {
     d('.menu-pc .item:nth-child(1) h1').classList.add('hover');
     d('.items-mobile .item:nth-child(1) h1').classList.add('hover');
 
@@ -15,7 +15,7 @@ addEventListener('scroll', function () {
     d('.menu-pc .item:nth-child(4) h1').classList.remove('hoverC');
     d('.items-mobile .item:nth-child(7) h1').classList.remove('hoverC');
   }
-  else if ((window.scrollY >= d('#sobre').offsetTop - d('#sobre').offsetTop * .3) && (window.scrollY < d('#projetos').offsetTop - d('#projetos').offsetTop * .3)) {
+  else if ((window.scrollY >= d('#about').offsetTop - d('#about').offsetTop * .3) && (window.scrollY < d('#projects').offsetTop - d('#projects').offsetTop * .3)) {
     d('.menu-pc .item:nth-child(1) h1').classList.remove('hover');
     d('.items-mobile .item:nth-child(1) h1').classList.remove('hover');
 
@@ -28,7 +28,7 @@ addEventListener('scroll', function () {
     d('.menu-pc .item:nth-child(4) h1').classList.remove('hoverC');
     d('.items-mobile .item:nth-child(7) h1').classList.remove('hoverC');
   }
-  else if ((window.scrollY >= d('#projetos').offsetTop - d('#projetos').offsetTop * .3) && (window.scrollY < d('#contato').offsetTop - d('#contato').offsetTop * .1)) {
+  else if ((window.scrollY >= d('#projects').offsetTop - d('#projects').offsetTop * .3) && (window.scrollY < d('#contact').offsetTop - d('#contact').offsetTop * .1)) {
     d('.menu-pc .item:nth-child(1) h1').classList.remove('hover');
     d('.items-mobile .item:nth-child(1) h1').classList.remove('hover');
 
@@ -41,7 +41,7 @@ addEventListener('scroll', function () {
     d('.menu-pc .item:nth-child(4) h1').classList.remove('hoverC');
     d('.items-mobile .item:nth-child(7) h1').classList.remove('hoverC');
   }
-  else if (window.scrollY >= d('#contato').offsetTop - d('#contato').offsetTop * .1) {
+  else if (window.scrollY >= d('#contact').offsetTop - d('#contact').offsetTop * .1) {
     d('.menu-pc .item:nth-child(1) h1').classList.remove('hover');
     d('.items-mobile .item:nth-child(1) h1').classList.remove('hover');
 
@@ -95,7 +95,7 @@ $(document).ready(function(){
 });
 function scrollToContact() {
   setTimeout(() => {
-    $('html, body').animate({scrollTop: $('#contato').offset().top}, 800, function(){})
+    $('html, body').animate({scrollTop: $('#contact').offset().top}, 800, function(){})
   },250)
 }
 

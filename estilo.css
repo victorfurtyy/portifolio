@@ -1,17 +1,17 @@
-/* Defina o estilo para o corpo do documento */
+/* Define the style for the document body */
 body {
 	font-family: Arial, sans-serif;
 	background-color: #f0f0f0;
 }
 
-/* Estilo para o título principal (<h1>) */
+/* Style for the main heading (<h1>) */
 h1 {
 	color: #333;
 	font-size: 36px;
 	text-align: center;
 }
 
-/* Estilo para os parágrafos (<p>) */
+/* Style for paragraphs (<p>) */
 p {
 	color: #666;
 	font-size: 18px;

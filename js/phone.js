@@ -1,4 +1,4 @@
-// DESBLOQUEIO
+// UNLOCK
 document.querySelector('#unlock').onpointerup = () => {
     unlockPhone()
 };
@@ -17,12 +17,12 @@ function unlockPhone() {
         document.querySelector('.phone').style = 'margin-top: 0';
     },200)
 }
-// DESBLOQUEIO
+// UNLOCK
 
 
 
 
-// RELÓGIO
+// CLOCK
 const clock = document.querySelector('#clock')
 
 clock.innerText = Date().slice(16,21)
@@ -31,7 +31,7 @@ setInterval(() => {
     clock.innerText = Date().slice(16,21)
 }, 2000)
 
-// RELÓGIO
+// CLOCK
 
 
 

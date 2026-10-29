@@ -34,7 +34,7 @@ body {
 	color: white;
 }
 
-/* FORMATAÇÃO CABECALHO - ICON */
+/* HEADER FORMATTING - ICON */
 
 header {
 	display: grid;
@@ -60,7 +60,7 @@ header .vicdev-icon img {
 	width: calc(var(--headerHeight) - 1em);
 }
 
-/* FORMATAÇÃO CABECALHO - TITULO*/
+/* HEADER FORMATTING - TITLE */
 
 header .site-title {
 	margin-left: 1em;
@@ -81,7 +81,7 @@ header .site-title h1:nth-child(3) {
 	font-weight: 500;
 }
 
-/* FORMATAÇÃO CABECALHO - MENU PC */
+/* HEADER FORMATTING - DESKTOP MENU */
 
 header .menu-pc {
 	display: grid;
@@ -116,7 +116,7 @@ header .menu-pc .item:nth-child(4) h1:hover {
 	cursor: pointer;
 
 }
-/* FORMATAÇÃO CABECALHO - MENU MOBILE */
+/* HEADER FORMATTING - MOBILE MENU */
 
 .menu-mobile {
 	display: none;
@@ -157,7 +157,7 @@ header .menu-pc .item:nth-child(4) h1:hover {
 	transform: rotate(-45deg) translate(35px, 35px);
 }
 
-/* FORMATAÇÃO  */
+/* FORMATTING */
 
 .items-mobile {
 	display: none;
@@ -230,7 +230,7 @@ section .content {
 }
 
 
-#sobre p {
+#about p {
 	font-size: 1.8em;
 	text-align: center;
 	margin-bottom: .5em;
@@ -238,7 +238,7 @@ section .content {
 
 
 
-#projetos .phone {
+#projects .phone {
 	height: calc(100vh - var(--headerHeight) - 6em);
 	position: relative;
 
@@ -246,10 +246,10 @@ section .content {
 	align-items: center;
 	justify-content: center;
 }
-#projetos .phone .phoneFrame {
+#projects .phone .phoneFrame {
 	height: 100%;
 }
-#projetos .phone #screen {
+#projects .phone #screen {
 	height: calc(100% - 3.6em);
 	width: calc(100% - 2.6em);
 	position: absolute;
@@ -321,15 +321,15 @@ footer h3 {
 	section .title {
 		font-size: 4em;
 	}
-	#sobre p {
+	#about p {
 		font-size: 1.3em;
 	}
 
-	#projetos .phone {
+	#projects .phone {
 		height: calc(100vh - var(--headerHeight) - 3.5em);
 	}
 
-	#projetos .phone #screen {
+	#projects .phone #screen {
 		height: calc(100% - 3.5em);
 		width: calc(100% - 2.5em);
 		border-radius: .6em;
@@ -383,11 +383,11 @@ footer h3 {
 		text-align: center;
 	}
 
-	#sobre p {
+	#about p {
 		font-size: 1.3em;
 	}
 
-	#projetos .phone #screen {
+	#projects .phone #screen {
 		height: calc(100% - 3.8em);
 		width: calc(100% - 2.5em);
 	}
